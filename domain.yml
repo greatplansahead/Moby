@@ -9,31 +9,62 @@ intents:
   - mood_unhappy
   - bot_challenge
   - ask_wikipedia
+  - wikipedia_query
+
+entities:
+ - technology
+ - programming_language
+ - person
+ - entertainment
+ - sports
+ - history
+
+slot:
+ technology:
+  type: text
+
+ programming_language:
+  type: text
+
+ person:
+  type: text
+
+ entertainment:
+  type: text
+
+ sport:
+  type: text
+
+ history:
+  type: text 
+
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
+    - text: "Hey! How are you?"
 
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://t3.ftcdn.net/jpg/02/95/44/22/360_F_295442295_OXsXOmLmqBUfZreTnGo9PREuAPSLQhff.jpg"
+    - text: "Here is something to cheer you up:"
+      image: "https://t3.ftcdn.net/jpg/02/95/44/22/360_F_295442295_OXsXOmLmqBUfZreTnGo9PREuAPSLQhff.jpg"
 
   utter_did_that_help:
-  - text: "Did that help you?"
+    - text: "Did that help you?"
 
   utter_happy:
-  - text: "Great, carry on!"
+    - text: "Great, carry on!"
 
   utter_goodbye:
-  - text: "Bye"
+    - text: "Bye"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+    - text: "I am a bot, powered by Rasa."
 
   utter_wikipedia_info:
-  - text: "Here's what I found on Wikipedia: {wiki_info}"
+    - text: "Here's what I found on Wikipedia: {wiki_info}"
 
 actions:
-  - actions_search_wikipedia
+  - action_search_wikipedia
+  - utter_wikipedia_info
+  - ask_wikipedia
 
 session_config:
   session_expiration_time: 60

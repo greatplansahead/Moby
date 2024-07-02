@@ -96,7 +96,7 @@ nlu:
     - am I talking to a human?
 
 - intent: ask_wikipedia
-  examples:
+  examples: |
     - Tell me about [Python](programming_language)
     - Who is [Albert Einstein](person)?
     - What is [Machine Learning](technology)?
